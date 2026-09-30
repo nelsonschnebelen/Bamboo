@@ -18,7 +18,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Scope+One&display=swap" rel="stylesheet">
-<link rel="icon" href="assets/logo.png">
+<link rel="icon" href="assets/lotus.png">
 
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Restaurant","name":"Bamboo Penny's",
@@ -30,56 +30,59 @@
 
 <style>
   :root{
-    --ink:#063242;          /* darkest brand teal — page bg & veil */
-    --teal:#0C4051;         /* primary brand teal — panels */
-    --teal-soft:#155467;
+    --ink:#063242;          /* darkest brand teal */
+    --teal:#0C4051;         /* primary brand teal */
+    --cream:#F7F4EC;        /* warm light ground (from brand neutral) */
+    --cream-2:#EFEBDF;
     --lime:#C5E260;         /* brand bamboo lime */
-    --lime-deep:#a9c743;
+    --lime-deep:#8FAE33;    /* legible lime for light ground */
     --white:#ffffff;
     --dim:rgba(255,255,255,.72);
     --faint:rgba(255,255,255,.45);
+    --tdim:rgba(12,64,81,.72);   /* teal dim, on light */
+    --tfaint:rgba(12,64,81,.45);
     --serif:'Scope One',Georgia,serif;
     --sans:'Montserrat',-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
     --stage-scrub:300vh;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
-  body{background:var(--ink);color:var(--white);font-family:var(--sans);line-height:1.6;overflow-x:hidden}
+  body{background:var(--cream);color:var(--teal);font-family:var(--sans);line-height:1.6;overflow-x:hidden}
   img{max-width:100%}
   a{color:inherit}
   ::selection{background:var(--lime);color:var(--ink)}
 
   /* ------------------------------------------------ annotations ---- */
-  .note-toggle{position:fixed;bottom:96px;right:20px;z-index:400;background:var(--white);color:var(--ink);border:none;border-radius:999px;padding:11px 20px;font-size:13px;font-weight:600;cursor:pointer;box-shadow:0 6px 24px rgba(0,0,0,.5);font-family:var(--sans)}
-  .note{display:none;position:absolute;z-index:150;background:#fdffe8;border:1.5px dashed var(--lime-deep);color:#33421a;font-size:12.5px;line-height:1.45;padding:10px 13px;border-radius:8px;max-width:260px;box-shadow:0 10px 30px rgba(0,0,0,.35);font-family:var(--sans);font-weight:400;text-transform:none;letter-spacing:0;text-align:left}
+  .note-toggle{position:fixed;bottom:96px;right:20px;z-index:400;background:var(--teal);color:var(--white);border:none;border-radius:999px;padding:11px 20px;font-size:13px;font-weight:600;cursor:pointer;box-shadow:0 6px 24px rgba(0,0,0,.35);font-family:var(--sans)}
+  .note{display:none;position:absolute;z-index:150;background:#fdffe8;border:1.5px dashed var(--lime-deep);color:#33421a;font-size:12.5px;line-height:1.45;padding:10px 13px;border-radius:8px;max-width:260px;box-shadow:0 10px 30px rgba(0,0,0,.25);font-family:var(--sans);font-weight:400;text-transform:none;letter-spacing:0;text-align:left}
   .note b{color:#5c7a1e}
   body.show-notes .note{display:block}
 
   /* ---------------------------------------------------- header ----- */
-  header{position:fixed;top:0;left:0;right:0;z-index:300;transition:background .3s,backdrop-filter .3s,border-color .3s;border-bottom:1px solid transparent}
-  header.scrolled{background:rgba(6,50,66,.88);backdrop-filter:blur(14px);border-color:rgba(197,226,96,.25)}
-  .nav{max-width:1360px;margin:0 auto;display:flex;align-items:center;gap:32px;padding:14px 32px}
+  header{position:fixed;top:0;left:0;right:0;z-index:300;transition:background .3s,backdrop-filter .3s,border-color .3s,color .3s;border-bottom:1px solid transparent;color:var(--white)}
+  header.scrolled{background:rgba(6,50,66,.9);backdrop-filter:blur(14px);border-color:rgba(197,226,96,.25)}
+  .nav{max-width:1360px;margin:0 auto;display:flex;align-items:center;gap:30px;padding:14px 32px}
   .nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none}
-  .nav-logo img{height:44px;width:auto}
+  .nav-logo img{height:38px;width:auto}
   .nav-logo span{font-family:var(--serif);font-size:19px;letter-spacing:.06em;white-space:nowrap}
-  .nav-links{display:flex;gap:28px;margin-left:auto;font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;font-weight:600}
-  .nav-links a{text-decoration:none;opacity:.8;transition:.2s}
+  .nav-links{display:flex;gap:26px;margin-left:auto;font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:600}
+  .nav-links a{text-decoration:none;opacity:.85;transition:.2s}
   .nav-links a:hover{opacity:1;color:var(--lime)}
-  .phone{font-size:13px;opacity:.8;text-decoration:none;white-space:nowrap}
+  .phone{font-size:13px;opacity:.85;text-decoration:none;white-space:nowrap}
   .pill{display:inline-flex;align-items:center;gap:10px;background:var(--lime);color:var(--ink);text-decoration:none;font-weight:700;font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;padding:13px 26px;border-radius:999px;transition:.25s;white-space:nowrap}
-  .pill:hover{background:var(--white);transform:translateY(-1px);box-shadow:0 8px 24px rgba(197,226,96,.35)}
+  .pill:hover{background:var(--white);transform:translateY(-1px);box-shadow:0 8px 24px rgba(197,226,96,.4)}
   .pill .dot{width:7px;height:7px;border-radius:50%;background:var(--ink);animation:pulse 1.6s ease infinite}
   @keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
 
   /* ------------------------------------------- cinematic stage ----- */
   .stagewrap{position:relative;height:100svh;min-height:640px}
   .cine-on .stagewrap{height:400vh;min-height:0}
-  .stage{position:sticky;top:0;height:100svh;min-height:640px;overflow:hidden}
+  .stage{position:sticky;top:0;height:100svh;min-height:640px;overflow:hidden;color:var(--white)}
 
   .photo{position:absolute;inset:0;z-index:0}
   .photo img{width:100%;height:100%;object-fit:cover;object-position:70% 35%}
 
-  .veil-static{position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,var(--ink) 22%,rgba(6,50,66,.78) 48%,rgba(6,50,66,.15))}
+  .veil-static{position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(6,50,66,.92) 20%,rgba(6,50,66,.6) 52%,rgba(6,50,66,.12))}
   .cine-on .veil-static{display:none}
   .veil{display:none}
   .cine-on .veil{display:block;position:absolute;inset:0;z-index:2;background:var(--ink);opacity:.84}
@@ -106,23 +109,39 @@
   .act-final{height:100%}
   .cine-on .act-final{text-align:left;padding:0}
   .final-shade{display:none}
-  .cine-on .final-shade{display:block;position:absolute;inset:0;background:linear-gradient(90deg,var(--ink) 22%,rgba(6,50,66,.78) 48%,rgba(6,50,66,.15))}
-  .final-inner{position:relative;display:flex;height:100%;width:100%;max-width:1360px;margin:0 auto;flex-direction:column;justify-content:center;align-items:flex-start;padding:7rem 32px 4rem}
-  .final-inner .kicker{display:flex;align-items:center;gap:14px;color:var(--lime);text-transform:uppercase;letter-spacing:.3em;font-size:11.5px;font-weight:600;margin-bottom:22px}
+  .cine-on .final-shade{display:block;position:absolute;inset:0;background:linear-gradient(90deg,rgba(6,50,66,.92) 20%,rgba(6,50,66,.6) 52%,rgba(6,50,66,.12))}
+  .final-inner{position:relative;display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center;height:100%;width:100%;max-width:1360px;margin:0 auto;padding:6.5rem 32px 4rem;pointer-events:auto}
+  .final-inner .kicker{display:flex;align-items:center;gap:14px;color:var(--lime);text-transform:uppercase;letter-spacing:.3em;font-size:11.5px;font-weight:600;margin-bottom:20px}
   .final-inner .kicker::before{content:"";width:44px;height:1px;background:var(--lime)}
-  .final-inner h1{font-family:var(--serif);font-weight:400;font-size:clamp(38px,5.6vw,74px);line-height:1.08;max-width:14ch}
+  .final-inner h1{font-family:var(--serif);font-weight:400;font-size:clamp(34px,4.6vw,62px);line-height:1.1;max-width:15ch}
   .final-inner h1 .hl{color:var(--lime)}
-  .cta-row{margin-top:2.2rem;display:flex;flex-wrap:wrap;gap:1rem;align-items:center}
-  .cta{display:inline-block;background:var(--lime);color:var(--ink);padding:17px 34px;border-radius:999px;text-decoration:none;font:700 13px/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;transition:.25s}
-  .cta:hover{background:var(--white);box-shadow:0 10px 28px rgba(197,226,96,.35)}
-  .cta-quiet{display:inline-block;border:1.5px solid rgba(255,255,255,.4);color:var(--white);padding:15px 30px;border-radius:999px;text-decoration:none;font:600 13px/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;transition:.25s}
-  .cta-quiet:hover{border-color:var(--lime);color:var(--lime)}
-  .hero-proof{display:flex;gap:16px;align-items:center;margin-top:26px;font-size:13.5px;color:var(--dim);flex-wrap:wrap}
+  .hero-proof{display:flex;gap:16px;align-items:center;margin-top:22px;font-size:13.5px;color:var(--dim);flex-wrap:wrap}
   .stars{color:var(--lime);letter-spacing:3px}
-  .awards{display:flex;gap:30px;margin-top:26px;flex-wrap:wrap}
-  .aw{border-left:2px solid var(--lime);padding-left:16px}
-  .aw-t{display:block;font-family:var(--serif);color:var(--white);font-size:19px;line-height:1.25}
-  .aw-s{display:block;font-size:9.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--faint);margin-top:4px;font-weight:600}
+  .awards{display:flex;gap:26px;margin-top:24px;flex-wrap:wrap}
+  .aw{border-left:2px solid var(--lime);padding-left:14px}
+  .aw-t{display:block;font-family:var(--serif);font-size:17px;line-height:1.25}
+  .aw-s{display:block;font-size:9px;letter-spacing:.2em;text-transform:uppercase;opacity:.6;margin-top:3px;font-weight:600}
+  .cta-row{margin-top:2rem;display:flex;flex-wrap:wrap;gap:1rem;align-items:center}
+  .cta{display:inline-block;background:var(--lime);color:var(--ink);padding:16px 32px;border-radius:999px;text-decoration:none;font:700 13px/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;transition:.25s}
+  .cta:hover{background:var(--white);box-shadow:0 10px 28px rgba(197,226,96,.4)}
+  .cta-quiet{display:inline-block;border:1.5px solid rgba(255,255,255,.45);color:var(--white);padding:14px 28px;border-radius:999px;text-decoration:none;font:600 13px/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;transition:.25s}
+  .cta-quiet:hover{border-color:var(--lime);color:var(--lime)}
+
+  /* booking card — used in hero (desktop) and visit section */
+  .book-card{background:rgba(6,50,66,.72);backdrop-filter:blur(16px);border:1px solid rgba(197,226,96,.4);border-radius:18px;padding:28px;box-shadow:0 30px 80px rgba(0,0,0,.45);color:var(--white)}
+  .book-card h3{font-family:var(--serif);font-weight:400;font-size:25px;margin-bottom:4px}
+  .book-card h3 span{color:var(--lime)}
+  .book-card .sub2{font-size:12.5px;color:var(--dim);margin-bottom:18px}
+  .book-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:9px;margin-bottom:12px}
+  .field{border:1px solid rgba(255,255,255,.22);border-radius:10px;padding:11px 13px;font-size:13.5px;background:rgba(255,255,255,.07);cursor:pointer;transition:.2s}
+  .field:hover{border-color:var(--lime)}
+  .field label{display:block;font-size:9.5px;text-transform:uppercase;letter-spacing:.14em;color:var(--faint);margin-bottom:2px}
+  .field .val{font-weight:600}
+  .btn-book{width:100%;background:var(--lime);color:var(--ink);padding:15px;font-size:13.5px;text-transform:uppercase;border:none;border-radius:999px;font-weight:700;letter-spacing:.1em;cursor:pointer;font-family:var(--sans);transition:.2s}
+  .btn-book:hover{background:var(--white)}
+  .book-alt{text-align:center;font-size:12.5px;color:var(--dim);margin-top:13px}
+  .book-alt a{color:var(--lime);font-weight:600}
+  .hero-book{position:relative}
 
   .hint{display:none}
   .cine-on .hint{position:absolute;z-index:6;inset-inline:0;bottom:1.6rem;display:flex;flex-direction:column;align-items:center;gap:8px;font:600 10px/1 var(--sans);letter-spacing:.3em;text-transform:uppercase;color:var(--faint)}
@@ -132,7 +151,7 @@
   /* ------------------------------- engine 1: CSS scroll timelines --- */
   @supports (animation-timeline: scroll()) {
     @keyframes cine-photo{from{transform:scale(1.04) translateY(0)}to{transform:scale(1.28) translateY(-3%)}}
-    @keyframes cine-veil{0%{opacity:.84}45%{opacity:.42}100%{opacity:.3}}
+    @keyframes cine-veil{0%{opacity:.84}45%{opacity:.42}100%{opacity:.28}}
     @keyframes cine-title{0%{opacity:1;transform:none;visibility:visible}12%{opacity:1;transform:scale(1.04);visibility:visible}37%,100%{opacity:0;transform:scale(1.34) translateY(-6%);visibility:hidden}}
     @keyframes cine-line{0%,33%{opacity:0;transform:translateY(64px);visibility:hidden}50%,72%{opacity:1;transform:none;visibility:visible}88%,100%{opacity:0;transform:translateY(-64px);visibility:hidden}}
     @keyframes cine-final{0%,84%{opacity:0;transform:translateY(48px);visibility:hidden}97%,100%{opacity:1;transform:none;visibility:visible}}
@@ -165,51 +184,57 @@
   section{position:relative}
   .wrap{max-width:1360px;margin:0 auto;padding:110px 32px}
   .sec-head{display:flex;align-items:baseline;gap:24px;margin-bottom:16px}
-  .sec-num{font-family:var(--serif);color:var(--lime);font-size:19px}
-  .sec-kicker{text-transform:uppercase;letter-spacing:.3em;font-size:11px;font-weight:600;color:var(--faint)}
-  h2.sec-title{font-family:var(--serif);font-weight:400;font-size:clamp(34px,4.6vw,60px);line-height:1.08;margin-bottom:18px}
-  h2.sec-title .hl{color:var(--lime)}
-  .sec-lead{max-width:56ch;color:var(--dim);font-size:16px}
+  .sec-num{font-family:var(--serif);color:var(--lime-deep);font-size:19px}
+  .sec-kicker{text-transform:uppercase;letter-spacing:.3em;font-size:11px;font-weight:600;color:var(--tfaint)}
+  h2.sec-title{font-family:var(--serif);font-weight:400;font-size:clamp(34px,4.6vw,60px);line-height:1.08;margin-bottom:18px;color:var(--teal)}
+  h2.sec-title .hl{color:var(--lime-deep)}
+  .sec-lead{max-width:56ch;color:var(--tdim);font-size:16px}
 
-  /* chef section */
-  .chef{background:var(--teal)}
-  .chef .wrap{display:grid;grid-template-columns:.92fr 1.08fr;gap:64px;align-items:center}
-  .chef-photos{position:relative;height:600px}
-  .chef-photos .p1,.chef-photos .p2{position:absolute;border-radius:14px;overflow:hidden;box-shadow:0 30px 70px rgba(0,0,0,.45)}
-  .chef-photos img{width:100%;height:100%;object-fit:cover}
-  .chef-photos .p1{width:78%;height:88%;left:0;top:0}
-  .chef-photos .p2{width:46%;height:44%;right:0;bottom:0;border:1px solid rgba(197,226,96,.5)}
-  .chef-quote{font-family:var(--serif);font-size:clamp(20px,2.2vw,26px);line-height:1.45;color:var(--white);border-left:2px solid var(--lime);padding-left:22px;margin:26px 0}
-  .chef p.txt{color:var(--dim);font-size:15.5px;margin-bottom:14px}
+  /* chef section — light, organic (Pure Thai energy) */
+  .chef{background:var(--cream)}
+  .chef .wrap{display:grid;grid-template-columns:.95fr 1.05fr;gap:70px;align-items:center}
+  .chef-photo{position:relative;max-width:520px;margin-inline:auto}
+  .chef-photo .blob{position:relative;overflow:hidden;border-radius:58% 42% 55% 45% / 45% 52% 48% 55%;box-shadow:0 30px 70px rgba(6,50,66,.25)}
+  .chef-photo .blob img{width:100%;height:100%;object-fit:cover;display:block}
+  .chef-photo::before{content:"";position:absolute;inset:-16px auto auto -16px;width:60%;height:60%;border-radius:58% 42% 55% 45% / 45% 52% 48% 55%;background:var(--lime);opacity:.35;z-index:-1}
+  .stamp{position:absolute;right:-26px;bottom:-10px;width:128px;height:128px;animation:spin 22s linear infinite;filter:drop-shadow(0 6px 18px rgba(6,50,66,.3))}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  .chef-quote{font-family:var(--serif);font-size:clamp(20px,2.2vw,26px);line-height:1.45;color:var(--teal);border-left:3px solid var(--lime);padding-left:22px;margin:26px 0}
+  .chef p.txt{color:var(--tdim);font-size:15.5px;margin-bottom:14px}
   .chef-awards{display:flex;gap:26px;margin-top:26px;flex-wrap:wrap}
+  .chef .aw{border-left-color:var(--lime-deep)}
+  .chef .aw-t{color:var(--teal)}
+  .chef .aw-s{color:var(--tfaint);opacity:1}
 
-  /* dishes gallery */
+  /* dishes gallery — light */
+  .dishes-sec{background:var(--cream-2)}
   .gallery{display:flex;gap:24px;overflow-x:auto;scroll-snap-type:x mandatory;padding:46px 32px 26px;max-width:1360px;margin:0 auto;scrollbar-width:none}
   .gallery::-webkit-scrollbar{display:none}
   .g-card{scroll-snap-align:start;flex:0 0 330px;position:relative}
-  .g-card .im{position:relative;height:430px;border-radius:14px;overflow:hidden}
+  .g-card .im{position:relative;height:430px;border-radius:18px 18px 120px 18px;overflow:hidden;box-shadow:0 18px 44px rgba(6,50,66,.18)}
+  .g-card:nth-child(2n) .im{border-radius:18px 120px 18px 18px}
   .g-card img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.6,.2,1)}
   .g-card:hover img{transform:scale(1.06)}
   .g-card .im::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(6,50,66,.85),transparent 55%)}
   .g-tag{position:absolute;top:16px;left:16px;z-index:3;font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--ink);background:var(--lime);border-radius:999px;padding:5px 12px}
-  .g-body{position:absolute;bottom:0;left:0;right:0;z-index:3;padding:22px}
+  .g-body{position:absolute;bottom:0;left:0;right:0;z-index:3;padding:22px;color:var(--white)}
   .g-body h3{font-family:var(--serif);font-weight:400;font-size:25px;margin-bottom:4px}
   .g-body p{font-size:13.5px;color:var(--dim);max-width:30ch}
-  .g-hint{max-width:1360px;margin:0 auto;padding:0 32px;display:flex;justify-content:space-between;align-items:center;color:var(--faint);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase}
-  .link-arrow{display:inline-flex;align-items:center;gap:10px;color:var(--lime);text-decoration:none;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;border-bottom:1.5px solid rgba(197,226,96,.4);padding-bottom:5px;transition:.2s}
-  .link-arrow:hover{gap:16px;border-color:var(--lime)}
+  .g-hint{max-width:1360px;margin:0 auto;padding:0 32px;display:flex;justify-content:space-between;align-items:center;color:var(--tfaint);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase}
+  .link-arrow{display:inline-flex;align-items:center;gap:10px;color:var(--lime-deep);text-decoration:none;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;border-bottom:1.5px solid rgba(143,174,51,.4);padding-bottom:5px;transition:.2s}
+  .link-arrow:hover{gap:16px;border-color:var(--lime-deep)}
 
-  /* interstitial quote */
-  .inter{position:relative;min-height:72vh;display:flex;align-items:center;justify-content:center;overflow:hidden;background:url('assets/food-spread.jpg') center/cover fixed}
-  .inter::after{content:"";position:absolute;inset:0;background:rgba(6,50,66,.78)}
+  /* interstitial quote — full-bleed photo (Au Cheval / Block 16 energy) */
+  .inter{position:relative;min-height:72vh;display:flex;align-items:center;justify-content:center;overflow:hidden;background:url('assets/food-spread.jpg') center/cover fixed;color:var(--white)}
+  .inter::after{content:"";position:absolute;inset:0;background:rgba(6,50,66,.72)}
   .inter-inner{position:relative;z-index:3;text-align:center;max-width:900px;padding:100px 32px}
   .inter .qm{font-family:var(--serif);font-size:100px;line-height:.4;color:var(--lime);display:block;margin-bottom:30px}
   .inter blockquote{font-family:var(--serif);font-size:clamp(26px,3.6vw,44px);line-height:1.25}
   .inter blockquote .hl{color:var(--lime)}
   .inter .who{margin-top:28px;font-size:11.5px;letter-spacing:.26em;text-transform:uppercase;color:var(--dim)}
 
-  /* bamboo room */
-  .broom{background:var(--ink);overflow:hidden}
+  /* bamboo room — stays dark: the after-hours contrast */
+  .broom{background:var(--ink);overflow:hidden;color:var(--white)}
   .broom .big-ghost{position:absolute;top:36px;left:0;right:0;text-align:center;font-family:var(--serif);font-size:clamp(60px,11vw,170px);color:transparent;-webkit-text-stroke:1px rgba(197,226,96,.16);white-space:nowrap;pointer-events:none;letter-spacing:.04em}
   .broom .wrap{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;padding-top:150px}
   .collage{position:relative;height:540px}
@@ -218,51 +243,47 @@
   .c1{width:62%;height:78%;left:0;top:0;z-index:1}
   .c2{width:46%;height:52%;right:0;bottom:6%;z-index:2;border:1px solid rgba(197,226,96,.4)}
   .c3{width:30%;height:30%;left:12%;bottom:0;z-index:3;border:1px solid rgba(197,226,96,.4)}
+  .broom .sec-num{color:var(--lime)}
+  .broom .sec-kicker{color:var(--faint)}
+  .broom h2.sec-title{color:var(--white)}
+  .broom h2.sec-title .hl{color:var(--lime)}
   .broom .meta{display:flex;gap:32px;margin:24px 0 32px;font-size:13.5px;flex-wrap:wrap}
   .broom .meta div b{display:block;color:var(--lime);text-transform:uppercase;font-size:10.5px;letter-spacing:.18em;margin-bottom:4px;font-weight:700}
   .broom p.txt{color:var(--dim);font-size:16px;max-width:46ch}
+  .broom .link-arrow{color:var(--lime);border-color:rgba(197,226,96,.4)}
 
-  /* reviews */
+  /* reviews — light */
   .rev-row{display:grid;grid-template-columns:1fr 1fr;gap:56px;margin-top:46px}
-  .rev-b{border-left:2px solid var(--lime);padding-left:28px}
-  .rev-b .stars{display:block;margin-bottom:14px;font-size:14px}
-  .rev-b p{font-family:var(--serif);font-size:21px;line-height:1.45}
-  .rev-b .who{margin-top:16px;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--faint);font-weight:600}
+  .rev-b{border-left:3px solid var(--lime);padding-left:28px}
+  .rev-b .stars{display:block;margin-bottom:14px;font-size:14px;color:var(--lime-deep)}
+  .rev-b p{font-family:var(--serif);font-size:21px;line-height:1.45;color:var(--teal)}
+  .rev-b .who{margin-top:16px;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--tfaint);font-weight:600}
 
-  /* events */
+  /* events — photo cards */
   .ev-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:46px}
-  .ev-card{position:relative;height:430px;border-radius:14px;overflow:hidden;display:flex;align-items:flex-end;text-decoration:none}
-  .ev-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.2,.6,.2,1);filter:brightness(.8)}
+  .ev-card{position:relative;height:430px;border-radius:18px;overflow:hidden;display:flex;align-items:flex-end;text-decoration:none;color:var(--white);box-shadow:0 18px 44px rgba(6,50,66,.18)}
+  .ev-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.2,.6,.2,1)}
   .ev-card:hover img{transform:scale(1.05)}
   .ev-card::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(6,50,66,.9),transparent 55%)}
   .ev-body{position:relative;z-index:3;padding:32px}
   .ev-body h3{font-family:var(--serif);font-weight:400;font-size:30px;margin-bottom:8px}
   .ev-body h3 span{color:var(--lime)}
   .ev-body p{font-size:14px;color:var(--dim);max-width:42ch;margin-bottom:16px}
+  .ev-body .link-arrow{color:var(--lime);border-color:rgba(197,226,96,.4)}
 
-  /* visit */
-  .visit{background:var(--teal)}
+  /* visit — light with teal book card */
+  .visit{background:var(--cream-2)}
   .visit .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center}
-  .hours{margin:28px 0;font-size:14.5px;border-top:1px solid rgba(255,255,255,.15)}
-  .hours div{display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.15)}
-  .hours span:last-child{color:var(--dim)}
-  .hh,.hh+span{color:var(--lime) !important;font-weight:600}
-  .book-card{background:var(--ink);border:1px solid rgba(197,226,96,.35);border-radius:16px;padding:30px;box-shadow:0 30px 80px rgba(0,0,0,.4)}
-  .book-card h3{font-family:var(--serif);font-weight:400;font-size:26px;margin-bottom:4px}
-  .book-card h3 span{color:var(--lime)}
-  .book-card .sub2{font-size:12.5px;color:var(--dim);margin-bottom:20px}
-  .book-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:9px;margin-bottom:12px}
-  .field{border:1px solid rgba(255,255,255,.18);border-radius:10px;padding:11px 13px;font-size:13.5px;background:rgba(255,255,255,.05);cursor:pointer;transition:.2s}
-  .field:hover{border-color:var(--lime)}
-  .field label{display:block;font-size:9.5px;text-transform:uppercase;letter-spacing:.14em;color:var(--faint);margin-bottom:2px}
-  .field .val{font-weight:600}
-  .btn-book{width:100%;background:var(--lime);color:var(--ink);padding:16px;font-size:13.5px;text-transform:uppercase;border:none;border-radius:999px;font-weight:700;letter-spacing:.1em;cursor:pointer;font-family:var(--sans);transition:.2s}
-  .btn-book:hover{background:var(--white)}
-  .book-alt{text-align:center;font-size:12.5px;color:var(--dim);margin-top:14px}
-  .book-alt a{color:var(--lime);font-weight:600}
+  .hours{margin:28px 0;font-size:14.5px;border-top:1px solid rgba(12,64,81,.18)}
+  .hours div{display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid rgba(12,64,81,.18)}
+  .hours span:last-child{color:var(--tdim)}
+  .hh,.hh+span{color:var(--lime-deep) !important;font-weight:600}
+  .visit .book-card{background:var(--teal);backdrop-filter:none}
+  .visit p.addr{color:var(--tdim)}
+  .visit a.tlink{color:var(--lime-deep);font-weight:600}
 
-  /* footer */
-  footer{border-top:1px solid rgba(197,226,96,.2);font-size:13.5px}
+  /* footer — dark teal */
+  footer{background:var(--ink);color:var(--white);border-top:1px solid rgba(197,226,96,.2);font-size:13.5px}
   footer .wrap{padding:64px 32px 46px;display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap}
   footer .f-logo img{height:56px;margin-bottom:12px}
   footer a{opacity:.7;text-decoration:none;display:block;margin-bottom:9px;transition:.2s}
@@ -272,13 +293,16 @@
 
   /* mobile sticky bar */
   .sticky-bar{position:fixed;bottom:0;left:0;right:0;z-index:350;display:none;grid-template-columns:1fr 1fr;background:rgba(6,50,66,.94);backdrop-filter:blur(12px);border-top:1px solid rgba(197,226,96,.35)}
-  .sticky-bar a{padding:16px;text-align:center;font-weight:700;font-size:13.5px;text-decoration:none;text-transform:uppercase;letter-spacing:.08em}
+  .sticky-bar a{padding:16px;text-align:center;font-weight:700;font-size:13.5px;text-decoration:none;text-transform:uppercase;letter-spacing:.08em;color:var(--white)}
   .sticky-bar .res{background:var(--lime);color:var(--ink)}
 
   @media (max-width:1020px){
     .nav-links,.phone{display:none}
+    .final-inner{grid-template-columns:1fr;gap:0;align-content:center}
+    .hero-book{display:none}          /* mobile hero: headline + CTA; widget lives in Visit */
+    .awards{display:none}             /* awards restated in chef section */
     .chef .wrap,.broom .wrap,.visit .wrap{grid-template-columns:1fr}
-    .chef-photos{height:480px}
+    .chef-photo{max-width:420px}
     .rev-row,.ev-grid{grid-template-columns:1fr}
     .g-card{flex-basis:290px}
     .g-card .im{height:380px}
@@ -286,9 +310,8 @@
     body{padding-bottom:54px}
     .inter{background-attachment:scroll}
     .collage{height:400px}
-    .awards,.chef-awards{gap:18px}
     .note{max-width:200px}
-    .final-inner{padding:6rem 24px 5rem}
+    .stamp{width:96px;height:96px;right:-8px}
   }
 </style>
 </head>
@@ -311,7 +334,7 @@
     </nav>
     <a class="phone" href="tel:9132327695">(913) 232-7695</a>
     <a class="pill" href="#visit"><span class="dot"></span>Reserve</a>
-    <div class="note" style="top:72px;right:24px"><b>1 · Brand, kept.</b> Same lotus logo, same teal + bamboo lime, same Scope One / Montserrat type as the current site — this is their brand turned up, not replaced. Nav is 5 links + one persistent lime Reserve pill (the current site has 15 links and sends bookings to Yelp with a hardcoded 2024 date).</div>
+    <div class="note" style="top:72px;right:24px"><b>1 · Quiet nav, one loud button.</b> Every reference site the client liked (La Marcha, Pure Thai, Rosewater) runs a small logo, a few letterspaced links, and a single highlighted reservation button. Same here: 5 links + the lime Reserve pill.</div>
   </div>
 </header>
 
@@ -339,7 +362,7 @@
         <p class="sub">Chef Penny Mufuka has spent a decade turning Thailand's four flavors into Kansas City's most awarded Thai table.</p>
       </div>
 
-      <!-- Act III: the real hero -->
+      <!-- Act III: the real hero, with the booking widget (Māze / La Marcha pattern) -->
       <div class="act act-final">
         <div class="final-shade" aria-hidden="true"></div>
         <div class="final-inner">
@@ -359,7 +382,20 @@
               <a class="cta" href="#visit">Book a Table</a>
               <a class="cta-quiet" href="#menu">View the Menu</a>
             </div>
-            <div class="note" style="bottom:-20px;left:0"><b>2 · A hero that earns the scroll.</b> The opening plays like a title sequence — her name, her promise, her dining room coming to light behind her — then lands on a real, clickable hero with verified awards and one primary CTA. Reduced-motion visitors and search engines get the finished frame instantly.</div>
+          </div>
+          <div class="hero-book">
+            <div class="book-card">
+              <h3>Reserve <span>your table</span></h3>
+              <div class="sub2">Free to book · instant confirmation</div>
+              <div class="book-grid">
+                <div class="field"><label>Date</label><div class="val">Tonight</div></div>
+                <div class="field"><label>Time</label><div class="val">7:00 PM</div></div>
+                <div class="field"><label>Guests</label><div class="val">2</div></div>
+              </div>
+              <button class="btn-book">Find a Table</button>
+              <div class="book-alt">Prefer to call? <a href="tel:9132327695">(913) 232-7695</a></div>
+            </div>
+            <div class="note" style="top:-18px;right:-8px"><b>2 · The Māze / La Marcha move.</b> Two of the client's reference sites put a live find-a-table widget directly over the hero photo. The film now lands on exactly that: headline left, booking widget right, zero scrolling to convert.</div>
           </div>
         </div>
       </div>
@@ -380,32 +416,41 @@
 <!-- ======================= CHEF PENNY ======================= -->
 <section class="chef" id="chef">
   <div class="wrap">
-    <div class="chef-photos reveal">
-      <div class="p1"><img src="assets/chef-smile.jpg" alt="Chef Penny Mufuka in her chef whites"></div>
-      <div class="p2"><img src="assets/chef-arms.jpg" alt="Chef Penny, arms crossed, in the dining room"></div>
+    <div class="chef-photo reveal">
+      <div class="blob"><img src="assets/chef-smile.jpg" alt="Chef Penny Mufuka in her chef whites"></div>
+      <svg class="stamp" viewBox="0 0 128 128" aria-hidden="true">
+        <defs><path id="circ" d="M64,64 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0"/></defs>
+        <circle cx="64" cy="64" r="62" fill="#0C4051"/>
+        <circle cx="64" cy="64" r="36" fill="none" stroke="#C5E260" stroke-width="1"/>
+        <text fill="#C5E260" font-family="Montserrat,sans-serif" font-size="10.5" letter-spacing="2.5">
+          <textPath href="#circ">EST. 2021 · LEAWOOD KS · THAI KITCHEN ·</textPath>
+        </text>
+        <text x="64" y="69" text-anchor="middle" fill="#fff" font-family="Scope One,serif" font-size="15">BP</text>
+      </svg>
+      <div class="note" style="bottom:-30px;left:0"><b>3 · Craft details.</b> The organic photo mask and rotating stamp badge come straight from the reference set (Pure Thai's blob collage, La Marcha's seal). Small handmade touches that read "independent restaurant," not template.</div>
     </div>
     <div class="reveal d1">
       <div class="sec-head"><span class="sec-num">01</span><span class="sec-kicker">The Chef</span></div>
-      <h2 class="sec-title">Meet <span class="hl">Chef Penny</span></h2>
+      <h2 class="sec-title">A story carried from <span class="hl">Bangkok to Leawood</span></h2>
       <p class="txt">Penny Mufuka came from Thailand in 1994 and worked her way up from busing tables to running her own kitchens. In 2021 she opened Bamboo Penny's in Leawood's Park Place — and Kansas City noticed.</p>
-      <div class="chef-quote">"Kansas City's Best Chef, Penny Mufuka, knows what the people want — and delivers."<br><span style="font-family:var(--sans);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--faint)">— The Pitch</span></div>
+      <div class="chef-quote">"Kansas City's Best Chef, Penny Mufuka, knows what the people want — and delivers."<br><span style="font-family:var(--sans);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--tfaint)">— The Pitch</span></div>
       <p class="txt">Every dish balances sweet, sour, salty and spice with fresh herbs and open flame — stir-fried, steamed, grilled and slow-stewed the way she learned it.</p>
       <div class="chef-awards">
         <div class="aw"><span class="aw-t">Best Chef</span><span class="aw-s">The Pitch · Best of KC</span></div>
         <div class="aw"><span class="aw-t">Chef of the Year 2025</span><span class="aw-s">Best of JoCo</span></div>
+        <div class="aw"><span class="aw-t">Best Thai Restaurant</span><span class="aw-s">Best of JoCo</span></div>
       </div>
-      <div class="note" style="bottom:-24px;left:0"><b>3 · The chef is the brand.</b> The current site never shows her face. These are the real photos from the shoot — the story (Thailand → busing tables → KC's Best Chef) is the strongest trust asset the restaurant owns.</div>
     </div>
   </div>
 </section>
 
 <!-- ======================= DISHES ======================= -->
-<section id="menu">
+<section class="dishes-sec" id="menu">
   <div class="wrap" style="padding-bottom:0">
     <div class="sec-head reveal"><span class="sec-num">02</span><span class="sec-kicker">The Food</span></div>
     <h2 class="sec-title reveal">Dishes worth <span class="hl">crossing town for</span></h2>
     <p class="sec-lead reveal d1">Thailand's four flavors, balanced plate by plate.</p>
-    <div class="note" style="top:110px;right:32px"><b>4 · Food out of the carousel.</b> The current site hides dishes in a 13-slide auto-carousel. A swipeable gallery puts photography first, with review language doing the selling. Swap in dishes from their own shoot when available.</div>
+    <div class="note" style="top:110px;right:32px"><b>4 · Photography-first, daylight ground.</b> The client's references (Au Cheval, Block 16, Malai) let food photography carry the color while the page stays warm and bright. Body sections moved from dark teal to the brand's warm neutral; the food pops harder for it.</div>
   </div>
   <div class="gallery">
     <div class="g-card reveal">
@@ -429,7 +474,7 @@
       <div class="g-body"><h3>Chef's Noodles</h3><p>Hand-pulled comfort, built for Bamboo Room hours.</p></div></div>
     </div>
   </div>
-  <div class="g-hint">
+  <div class="g-hint" style="padding-bottom:80px">
     <span>Drag / swipe →</span>
     <a class="link-arrow" href="https://bamboopennys.com/leawood-leawood-bamboo-penny-s-food-menu">View the full menu <span>→</span></a>
   </div>
@@ -441,7 +486,7 @@
     <span class="qm">“</span>
     <blockquote>Wasn't expecting such an amazing environment and a <span class="hl">mind-blowing</span> yellow curry chicken.</blockquote>
     <div class="who">★★★★★ &nbsp;·&nbsp; Yelp review, Kansas City</div>
-    <div class="note" style="bottom:36px;left:50%;transform:translateX(-50%)"><b>5 · Proof as theater.</b> A real Yelp quote becomes a full-screen moment instead of an auto-scrolling footer carousel — social proof no visitor can miss.</div>
+    <div class="note" style="bottom:36px;left:50%;transform:translateX(-50%)"><b>5 · Proof as theater.</b> A real Yelp quote over a full-bleed table spread — the Au Cheval / Block 16 overhead-food moment, doing social-proof duty.</div>
   </div>
 </section>
 
@@ -464,7 +509,7 @@
         <div><b>Mood</b>Low light, loud flavor</div>
       </div>
       <a class="link-arrow" href="https://bamboopennys.com/leawood-leawood-bamboo-penny-s-bamboo-room">Step inside <span>→</span></a>
-      <div class="note" style="bottom:-24px;left:0"><b>6 · The differentiator gets drama.</b> No other Thai spot in KC has a late-night lounge. Ghost typography and a layered collage sell a second visit occasion — not one carousel slide.</div>
+      <div class="note" style="bottom:-24px;left:0"><b>6 · One dark room, on purpose.</b> With the body gone light, the Bamboo Room is now the only dark section — the same day-to-night contrast Jungsik and Bresca use. The differentiator literally feels like stepping into the lounge.</div>
     </div>
   </div>
 </section>
@@ -501,7 +546,7 @@
         <img src="assets/room-warm.jpg" alt="Warm dining room">
         <div class="ev-body"><h3>Catering <span>&amp; Large To-Go</span></h3><p>Full tropical Thai spreads for your gathering — delivered, or ready when you are.</p><span class="link-arrow">Get a quote <span>→</span></span></div>
       </a>
-      <div class="note" style="top:-20px;left:38%"><b>7 · High-ticket funnels, equal billing.</b> Events and catering carry the highest order value — and the patio photo is Chef Penny herself. Event-focused microsites hang off these cards.</div>
+      <div class="note" style="top:-20px;left:38%"><b>7 · High-ticket funnels, equal billing.</b> Events and catering carry the highest order value — and the patio card is Chef Penny herself. Event-focused microsites hang off these cards.</div>
     </div>
   </div>
 </section>
@@ -512,14 +557,14 @@
     <div class="reveal">
       <div class="sec-head"><span class="sec-num">06</span><span class="sec-kicker">Visit</span></div>
       <h2 class="sec-title">In the heart of <span class="hl">Leawood</span></h2>
-      <p style="color:var(--dim)">5270 West 116th Place, Leawood, KS 66211 · Park Place district · free parking</p>
+      <p class="addr">5270 West 116th Place, Leawood, KS 66211 · Park Place district · free parking</p>
       <div class="hours">
         <div><span>Sun – Thu</span><span>11 AM – 9 PM</span></div>
         <div><span>Fri – Sat</span><span>11 AM – 10 PM</span></div>
         <div><span>Bamboo Room · Fri–Sat</span><span>4 PM – Midnight</span></div>
         <div><span class="hh">Happy Hour · Mon–Fri</span><span>2 – 5 PM</span></div>
       </div>
-      <p style="color:var(--dim);font-size:14px">Questions? <a href="tel:9132327695" style="color:var(--lime);font-weight:600">(913) 232-7695</a> &nbsp;·&nbsp; <a href="https://maps.google.com/?q=Bamboo+Penny's+Leawood" style="color:var(--lime);font-weight:600">Get directions</a></p>
+      <p class="addr" style="font-size:14px">Questions? <a href="tel:9132327695" class="tlink">(913) 232-7695</a> &nbsp;·&nbsp; <a href="https://maps.google.com/?q=Bamboo+Penny's+Leawood" class="tlink">Get directions</a></p>
     </div>
     <div class="book-card reveal d1">
       <h3>Reserve <span>your table</span></h3>
@@ -531,7 +576,7 @@
       </div>
       <button class="btn-book">Find a Table</button>
       <div class="book-alt">Prefer to call? <a href="tel:9132327695">(913) 232-7695</a> · 8+ guests? <a href="#events">Private dining</a></div>
-      <div class="note" style="top:-20px;right:-8px"><b>8 · One booking flow, on-site.</b> This mock becomes the real reservation embed (Toast, like Penny's in the Village, or OpenTable) — replacing the current Yelp link with its hardcoded January 2024 date. Every Reserve CTA on the page lands here.</div>
+      <div class="note" style="top:-20px;right:-8px"><b>8 · One booking flow, twice placed.</b> The widget lives in the hero (Māze-style) and again here at the close, so a decided guest never scrolls to convert. In production both become the real reservation embed — replacing the current Yelp link with its hardcoded January 2024 date.</div>
     </div>
   </div>
 </section>
@@ -565,7 +610,7 @@ addEventListener('scroll',function(){hdr.classList.toggle('scrolled',scrollY>40)
 var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.15});
 document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
 
-// gold-lime glitter field inside the hero stage
+// lime glitter field inside the hero stage
 (function(){
   var cv=document.getElementById('sparks');
   if(!cv||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
@@ -617,7 +662,7 @@ document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
 
   var TRACKS = [
     { sel: ".photo", yu: "%", kf: [[0, { s: [1.04, 1.28], y: [0, -3] }], [100, {}]] },
-    { sel: ".veil", kf: [[0, { o: [0.84, 0.42] }], [45, { o: [0.42, 0.3] }], [100, {}]] },
+    { sel: ".veil", kf: [[0, { o: [0.84, 0.42] }], [45, { o: [0.42, 0.28] }], [100, {}]] },
     { sel: ".act-title", yu: "%", kf: [[0, { o: [1, 1], s: [1, 1.04], y: [0, 0] }], [12, { o: [1, 0], s: [1.04, 1.34], y: [0, -6] }], [37, { o: [0, 0], s: [1.34, 1.34], y: [-6, -6] }], [100, {}]] },
     { sel: ".act-line", yu: "px", kf: [[0, { o: [0, 0], y: [64, 64] }], [33, { o: [0, 1], y: [64, 0] }], [50, { o: [1, 1], y: [0, 0] }], [72, { o: [1, 0], y: [0, -64] }], [88, { o: [0, 0], y: [-64, -64] }], [100, {}]] },
     { sel: ".act-final", yu: "px", kf: [[0, { o: [0, 0], y: [48, 48] }], [84, { o: [0, 1], y: [48, 0] }], [97, { o: [1, 1], y: [0, 0] }], [100, {}]] },
