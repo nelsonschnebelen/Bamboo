@@ -4,7 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Authentic Thai Restaurant in Leawood, KS | Bamboo Penny's</title>
-<meta name="description" content="Bamboo Penny's — award-winning Thai kitchen & lounge by Chef Penny Mufuka, KC's Best Chef. Reserve your table in Leawood's Park Place.">
+<meta name="description" content="Bamboo Penny's — award-winning Thai restaurant in Leawood, KS by Chef Penny Mufuka, KC's Best Chef. Reserve a table or order carryout &amp; delivery.">
+<link rel="canonical" href="https://bamboopennys.com/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Bamboo Penny's — Award-Winning Thai in Leawood, KS">
+<meta property="og:description" content="By Chef Penny Mufuka, KC's Best Chef. Reserve a table or order carryout &amp; delivery.">
+<meta property="og:image" content="https://nelsonschnebelen.github.io/Bamboo/assets/hero-chef.jpg">
+<meta property="og:url" content="https://bamboopennys.com/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Bamboo Penny's — Award-Winning Thai in Leawood, KS">
+<meta name="twitter:description" content="By Chef Penny Mufuka, KC's Best Chef. Reserve a table or order carryout &amp; delivery.">
+<meta name="twitter:image" content="https://nelsonschnebelen.github.io/Bamboo/assets/hero-chef.jpg">
 
 <script>
   // Pre-paint engine gate: cinematic layout only when motion is welcome.
@@ -24,7 +34,10 @@
 {"@context":"https://schema.org","@type":"Restaurant","name":"Bamboo Penny's",
 "servesCuisine":"Thai","priceRange":"$$","telephone":"+1-913-232-7695",
 "address":{"@type":"PostalAddress","streetAddress":"5270 West 116th Place","addressLocality":"Leawood","addressRegion":"KS","postalCode":"66211"},
-"url":"https://bamboopennys.com","award":["Best Thai Restaurant — Best of Johnson County","Chef of the Year 2025 — Best of Johnson County (Penny Mufuka)","Best Chef — The Pitch, Best of KC (Penny Mufuka)"],
+"url":"https://bamboopennys.com","image":"https://nelsonschnebelen.github.io/Bamboo/assets/hero-chef.jpg",
+"acceptsReservations":"True","hasMenu":"https://bamboopennys.com/leawood-leawood-bamboo-penny-s-food-menu",
+"sameAs":["https://www.facebook.com/102935811849755","https://www.instagram.com/bamboopennys","https://www.yelp.com/biz/bamboo-pennys-leawood"],
+"potentialAction":{"@type":"OrderAction","target":"https://order.online/business/bamboo-pennys-11309389"},"award":["Best Thai Restaurant — Best of Johnson County","Chef of the Year 2025 — Best of Johnson County (Penny Mufuka)","Best Chef — The Pitch, Best of KC (Penny Mufuka)"],
 "openingHours":["Su-Th 11:00-21:00","Fr-Sa 11:00-22:00"]}
 </script>
 
@@ -73,6 +86,8 @@
   .pill:hover{background:var(--white);transform:translateY(-1px);box-shadow:0 8px 24px rgba(197,226,96,.4)}
   .pill .dot{width:7px;height:7px;border-radius:50%;background:var(--ink);animation:pulse 1.6s ease infinite}
   @keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+  .pill-ghost{background:transparent;border:1.5px solid var(--lime);color:var(--lime)}
+  .pill-ghost:hover{background:var(--lime);color:var(--ink);box-shadow:0 8px 24px rgba(197,226,96,.4)}
 
   /* ------------------------------------------- cinematic stage ----- */
   .stagewrap{position:relative;height:100svh;min-height:640px}
@@ -224,8 +239,13 @@
   .link-arrow{display:inline-flex;align-items:center;gap:10px;color:var(--lime-deep);text-decoration:none;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;border-bottom:1.5px solid rgba(143,174,51,.4);padding-bottom:5px;transition:.2s}
   .link-arrow:hover{gap:16px;border-color:var(--lime-deep)}
 
+  .order-strip{background:var(--teal);margin-top:70px}
+  .os-inner{max-width:1360px;margin:0 auto;padding:40px 32px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+  .os-line{font-family:var(--serif);font-size:clamp(21px,2.6vw,30px);color:var(--white)}
+  .os-line span{color:var(--lime)}
+
   /* interstitial quote — full-bleed photo (Au Cheval / Block 16 energy) */
-  .inter{position:relative;min-height:72vh;display:flex;align-items:center;justify-content:center;overflow:hidden;background:url('assets/food-spread.jpg') center/cover fixed;color:var(--white)}
+  .inter{position:relative;min-height:72vh;display:flex;align-items:center;justify-content:center;overflow:hidden;background:url('assets/chef-room.jpg') center/cover fixed;color:var(--white)}
   .inter::after{content:"";position:absolute;inset:0;background:rgba(6,50,66,.72)}
   .inter-inner{position:relative;z-index:3;text-align:center;max-width:900px;padding:100px 32px}
   .inter .qm{font-family:var(--serif);font-size:100px;line-height:.4;color:var(--lime);display:block;margin-bottom:30px}
@@ -292,12 +312,13 @@
   .fine{border-top:1px solid rgba(255,255,255,.1);padding:20px 32px;text-align:center;font-size:11.5px;color:var(--faint)}
 
   /* mobile sticky bar */
-  .sticky-bar{position:fixed;bottom:0;left:0;right:0;z-index:350;display:none;grid-template-columns:1fr 1fr;background:rgba(6,50,66,.94);backdrop-filter:blur(12px);border-top:1px solid rgba(197,226,96,.35)}
+  .sticky-bar{position:fixed;bottom:0;left:0;right:0;z-index:350;display:none;grid-template-columns:1fr 1.1fr 1.1fr;background:rgba(6,50,66,.94);backdrop-filter:blur(12px);border-top:1px solid rgba(197,226,96,.35)}
   .sticky-bar a{padding:16px;text-align:center;font-weight:700;font-size:13.5px;text-decoration:none;text-transform:uppercase;letter-spacing:.08em;color:var(--white)}
   .sticky-bar .res{background:var(--lime);color:var(--ink)}
+  .sticky-bar .ord{border-left:1px solid rgba(197,226,96,.35);border-right:1px solid rgba(197,226,96,.35);color:var(--lime)}
 
   @media (max-width:1020px){
-    .nav-links,.phone{display:none}
+    .nav-links,.phone,.pill-ghost{display:none}
     .final-inner{grid-template-columns:1fr;gap:0;align-content:center}
     .hero-book{display:none}          /* mobile hero: headline + CTA; widget lives in Visit */
     .awards{display:none}             /* awards restated in chef section */
@@ -333,6 +354,7 @@
       <a href="#visit">Visit</a>
     </nav>
     <a class="phone" href="tel:9132327695">(913) 232-7695</a>
+    <a class="pill pill-ghost" href="https://order.online/business/bamboo-pennys-11309389">Order</a>
     <a class="pill" href="#visit"><span class="dot"></span>Reserve</a>
     <div class="note" style="top:72px;right:24px"><b>1 · Quiet nav, one loud button.</b> Every reference site the client liked (La Marcha, Pure Thai, Rosewater) runs a small logo, a few letterspaced links, and a single highlighted reservation button. Same here: 5 links + the lime Reserve pill.</div>
   </div>
@@ -342,7 +364,7 @@
 <section class="stagewrap" id="top">
   <div class="stage">
     <div class="photo" aria-hidden="true">
-      <img src="assets/hero-chef.jpg" alt="">
+      <img src="assets/hero-chef.jpg" alt="" fetchpriority="high">
     </div>
     <div class="veil-static" aria-hidden="true"></div>
     <div class="veil" aria-hidden="true"></div>
@@ -380,7 +402,7 @@
             </div>
             <div class="cta-row">
               <a class="cta" href="#visit">Book a Table</a>
-              <a class="cta-quiet" href="#menu">View the Menu</a>
+              <a class="cta-quiet" href="https://order.online/business/bamboo-pennys-11309389">Order Pickup &amp; Delivery</a>
             </div>
           </div>
           <div class="hero-book">
@@ -393,9 +415,9 @@
                 <div class="field"><label>Guests</label><div class="val">2</div></div>
               </div>
               <button class="btn-book">Find a Table</button>
-              <div class="book-alt">Prefer to call? <a href="tel:9132327695">(913) 232-7695</a></div>
+              <div class="book-alt">Staying in? <a href="https://order.online/business/bamboo-pennys-11309389">Order pickup &amp; delivery</a> · <a href="tel:9132327695">(913) 232-7695</a></div>
             </div>
-            <div class="note" style="top:-18px;right:-8px"><b>2 · The Māze / La Marcha move.</b> Two of the client's reference sites put a live find-a-table widget directly over the hero photo. The film now lands on exactly that: headline left, booking widget right, zero scrolling to convert.</div>
+            <div class="note" style="top:-18px;right:-8px"><b>2 · Both revenue engines above the fold.</b> Reservations (widget, Māze / La Marcha pattern) and carryout/delivery (Order CTA + header pill) are the two money paths — both now convert without a single scroll, on every device.</div>
           </div>
         </div>
       </div>
@@ -417,7 +439,7 @@
 <section class="chef" id="chef">
   <div class="wrap">
     <div class="chef-photo reveal">
-      <div class="blob"><img src="assets/chef-smile.jpg" alt="Chef Penny Mufuka in her chef whites"></div>
+      <div class="blob"><img src="assets/chef-smile.jpg" alt="Chef Penny Mufuka in her chef whites" loading="lazy" decoding="async"></div>
       <svg class="stamp" viewBox="0 0 128 128" aria-hidden="true">
         <defs><path id="circ" d="M64,64 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0"/></defs>
         <circle cx="64" cy="64" r="62" fill="#0C4051"/>
@@ -454,29 +476,35 @@
   </div>
   <div class="gallery">
     <div class="g-card reveal">
-      <div class="im"><img src="assets/food-yellow-curry.jpg" alt="Yellow curry">
+      <div class="im"><img src="assets/food-yellow-curry.jpg" alt="Yellow curry" loading="lazy" decoding="async">
       <span class="g-tag">Guest favorite</span>
       <div class="g-body"><h3>Yellow Curry</h3><p>The "mind-blowing" dish reviewers drive across the metro for.</p></div></div>
     </div>
     <div class="g-card reveal d1">
-      <div class="im"><img src="assets/food-fried-rice.jpg" alt="Pineapple shrimp fried rice">
+      <div class="im"><img src="assets/food-fried-rice.jpg" alt="Pineapple shrimp fried rice" loading="lazy" decoding="async">
       <span class="g-tag">Chef's pick</span>
       <div class="g-body"><h3>Pineapple Shrimp Fried Rice</h3><p>Sweet, savory, served with showmanship.</p></div></div>
     </div>
     <div class="g-card reveal d2">
-      <div class="im"><img src="assets/food-red-curry.jpg" alt="Red curry">
+      <div class="im"><img src="assets/food-red-curry.jpg" alt="Red curry" loading="lazy" decoding="async">
       <span class="g-tag">Classic</span>
       <div class="g-body"><h3>Red Curry</h3><p>Slow-stewed depth, bright chili heat, Thai basil.</p></div></div>
     </div>
     <div class="g-card reveal d2">
-      <div class="im"><img src="assets/food-noodles.jpg" alt="Noodle bowl">
+      <div class="im"><img src="assets/food-noodles.jpg" alt="Noodle bowl" loading="lazy" decoding="async">
       <span class="g-tag">Late night</span>
       <div class="g-body"><h3>Chef's Noodles</h3><p>Hand-pulled comfort, built for Bamboo Room hours.</p></div></div>
     </div>
   </div>
-  <div class="g-hint" style="padding-bottom:80px">
+  <div class="g-hint">
     <span>Drag / swipe →</span>
     <a class="link-arrow" href="https://bamboopennys.com/leawood-leawood-bamboo-penny-s-food-menu">View the full menu <span>→</span></a>
+  </div>
+  <div class="order-strip">
+    <div class="os-inner">
+      <p class="os-line">Craving it on the couch? <span>Every dish travels.</span></p>
+      <a class="cta" href="https://order.online/business/bamboo-pennys-11309389">Order Pickup &amp; Delivery</a>
+    </div>
   </div>
 </section>
 
@@ -486,7 +514,7 @@
     <span class="qm">“</span>
     <blockquote>Wasn't expecting such an amazing environment and a <span class="hl">mind-blowing</span> yellow curry chicken.</blockquote>
     <div class="who">★★★★★ &nbsp;·&nbsp; Yelp review, Kansas City</div>
-    <div class="note" style="bottom:36px;left:50%;transform:translateX(-50%)"><b>5 · Proof as theater.</b> A real Yelp quote over a full-bleed table spread — the Au Cheval / Block 16 overhead-food moment, doing social-proof duty.</div>
+    <div class="note" style="bottom:36px;left:50%;transform:translateX(-50%)"><b>5 · Proof as theater.</b> A real Yelp quote over Chef Penny in her own dining room — every interior on this page is now the actual venue.</div>
   </div>
 </section>
 
@@ -495,9 +523,9 @@
   <div class="big-ghost">TILL&nbsp;MIDNIGHT</div>
   <div class="wrap">
     <div class="collage reveal">
-      <div class="c1"><img src="assets/bar-cocktail.jpg" alt="Signature cocktail in the Bamboo Room"></div>
-      <div class="c2"><img src="assets/bar-pour.jpg" alt="Cocktail pour"></div>
-      <div class="c3"><img src="assets/bar-trio.jpg" alt="Cocktail trio"></div>
+      <div class="c1"><img src="assets/bar-cocktail.jpg" alt="Signature cocktail in the Bamboo Room" loading="lazy" decoding="async"></div>
+      <div class="c2"><img src="assets/bar-pour.jpg" alt="Cocktail pour" loading="lazy" decoding="async"></div>
+      <div class="c3"><img src="assets/bar-trio.jpg" alt="Cocktail trio" loading="lazy" decoding="async"></div>
     </div>
     <div class="reveal d1">
       <div class="sec-head"><span class="sec-num">03</span><span class="sec-kicker">After Dark</span></div>
@@ -539,11 +567,11 @@
     <h2 class="sec-title reveal">Your event, <span class="hl">our fire</span></h2>
     <div class="ev-grid">
       <a class="ev-card reveal" href="https://bamboopennys.com/leawood-leawood-bamboo-penny-s-party">
-        <img src="assets/chef-patio.jpg" alt="Chef Penny on the patio">
+        <img src="assets/chef-patio.jpg" alt="Chef Penny on the patio" loading="lazy" decoding="async">
         <div class="ev-body"><h3>Private <span>Events</span></h3><p>Rehearsal dinners to corporate takeovers of the Bamboo Room — each one built to your vision, with Chef Penny behind the fire.</p><span class="link-arrow">Plan your event <span>→</span></span></div>
       </a>
       <a class="ev-card reveal d1" href="https://tmt.spotapps.co/catering?spot_id=106368">
-        <img src="assets/room-warm.jpg" alt="Warm dining room">
+        <img src="assets/cater-table.jpg" alt="A set table at Bamboo Penny's" loading="lazy" decoding="async">
         <div class="ev-body"><h3>Catering <span>&amp; Large To-Go</span></h3><p>Full tropical Thai spreads for your gathering — delivered, or ready when you are.</p><span class="link-arrow">Get a quote <span>→</span></span></div>
       </a>
       <div class="note" style="top:-20px;left:38%"><b>7 · High-ticket funnels, equal billing.</b> Events and catering carry the highest order value — and the patio card is Chef Penny herself. Event-focused microsites hang off these cards.</div>
@@ -599,6 +627,7 @@
 
 <div class="sticky-bar">
   <a href="tel:9132327695">Call</a>
+  <a class="ord" href="https://order.online/business/bamboo-pennys-11309389">Order</a>
   <a class="res" href="#visit">Reserve</a>
 </div>
 
