@@ -9,12 +9,12 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="Bamboo Penny's — Award-Winning Thai in Leawood, KS">
 <meta property="og:description" content="By Chef Penny Mufuka, KC's Best Chef. Reserve a table or order carryout &amp; delivery.">
-<meta property="og:image" content="https://nelsonschnebelen.github.io/Bamboo/assets/hero-chef.jpg">
+<meta property="og:image" content="https://nelsonschnebelen.github.io/Bamboo/assets/hero-room.jpg">
 <meta property="og:url" content="https://bamboopennys.com/">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Bamboo Penny's — Award-Winning Thai in Leawood, KS">
 <meta name="twitter:description" content="By Chef Penny Mufuka, KC's Best Chef. Reserve a table or order carryout &amp; delivery.">
-<meta name="twitter:image" content="https://nelsonschnebelen.github.io/Bamboo/assets/hero-chef.jpg">
+<meta name="twitter:image" content="https://nelsonschnebelen.github.io/Bamboo/assets/hero-room.jpg">
 
 <script>
   // Pre-paint engine gate: cinematic layout only when motion is welcome.
@@ -34,7 +34,7 @@
 {"@context":"https://schema.org","@type":"Restaurant","name":"Bamboo Penny's",
 "servesCuisine":"Thai","priceRange":"$$","telephone":"+1-913-232-7695",
 "address":{"@type":"PostalAddress","streetAddress":"5270 West 116th Place","addressLocality":"Leawood","addressRegion":"KS","postalCode":"66211"},
-"url":"https://bamboopennys.com","image":"https://nelsonschnebelen.github.io/Bamboo/assets/hero-chef.jpg",
+"url":"https://bamboopennys.com","image":"https://nelsonschnebelen.github.io/Bamboo/assets/hero-room.jpg",
 "acceptsReservations":"True","hasMenu":"https://bamboopennys.com/leawood-leawood-bamboo-penny-s-food-menu",
 "sameAs":["https://www.facebook.com/102935811849755","https://www.instagram.com/bamboopennys","https://www.yelp.com/biz/bamboo-pennys-leawood"],
 "potentialAction":{"@type":"OrderAction","target":"https://order.online/business/bamboo-pennys-11309389"},"award":["Best Thai Restaurant — Best of Johnson County","Chef of the Year 2025 — Best of Johnson County (Penny Mufuka)","Best Chef — The Pitch, Best of KC (Penny Mufuka)"],
@@ -95,7 +95,7 @@
   .stage{position:sticky;top:0;height:100svh;min-height:640px;overflow:hidden;color:var(--white)}
 
   .photo{position:absolute;inset:0;z-index:0}
-  .photo img{width:100%;height:100%;object-fit:cover;object-position:70% 35%}
+  .photo img{width:100%;height:100%;object-fit:cover}
 
   .veil-static{position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(6,50,66,.92) 20%,rgba(6,50,66,.6) 52%,rgba(6,50,66,.12))}
   .cine-on .veil-static{display:none}
@@ -212,6 +212,8 @@
   .chef-photo .blob{position:relative;overflow:hidden;border-radius:58% 42% 55% 45% / 45% 52% 48% 55%;box-shadow:0 30px 70px rgba(6,50,66,.25)}
   .chef-photo .blob img{width:100%;height:100%;object-fit:cover;display:block}
   .chef-photo::before{content:"";position:absolute;inset:-16px auto auto -16px;width:60%;height:60%;border-radius:58% 42% 55% 45% / 45% 52% 48% 55%;background:var(--lime);opacity:.35;z-index:-1}
+  .award-pic{position:absolute;right:-28px;top:-22px;width:46%;border-radius:12px;overflow:hidden;border:5px solid #fff;box-shadow:0 18px 44px rgba(6,50,66,.3);transform:rotate(3deg);z-index:2}
+  .award-pic img{display:block;width:100%}
   .stamp{position:absolute;right:-26px;bottom:-10px;width:128px;height:128px;animation:spin 22s linear infinite;filter:drop-shadow(0 6px 18px rgba(6,50,66,.3))}
   @keyframes spin{to{transform:rotate(360deg)}}
   .chef-quote{font-family:var(--serif);font-size:clamp(20px,2.2vw,26px);line-height:1.45;color:var(--teal);border-left:3px solid var(--lime);padding-left:22px;margin:26px 0}
@@ -245,7 +247,7 @@
   .os-line span{color:var(--lime)}
 
   /* interstitial quote — full-bleed photo (Au Cheval / Block 16 energy) */
-  .inter{position:relative;min-height:72vh;display:flex;align-items:center;justify-content:center;overflow:hidden;background:url('assets/chef-room.jpg') center/cover fixed;color:var(--white)}
+  .inter{position:relative;min-height:72vh;display:flex;align-items:center;justify-content:center;overflow:hidden;background:url('assets/inter-toast.jpg') center/cover fixed;color:var(--white)}
   .inter::after{content:"";position:absolute;inset:0;background:rgba(6,50,66,.72)}
   .inter-inner{position:relative;z-index:3;text-align:center;max-width:900px;padding:100px 32px}
   .inter .qm{font-family:var(--serif);font-size:100px;line-height:.4;color:var(--lime);display:block;margin-bottom:30px}
@@ -364,7 +366,7 @@
 <section class="stagewrap" id="top">
   <div class="stage">
     <div class="photo" aria-hidden="true">
-      <img src="assets/hero-chef.jpg" alt="" fetchpriority="high">
+      <img src="assets/hero-room.jpg" alt="" fetchpriority="high">
     </div>
     <div class="veil-static" aria-hidden="true"></div>
     <div class="veil" aria-hidden="true"></div>
@@ -440,6 +442,7 @@
   <div class="wrap">
     <div class="chef-photo reveal">
       <div class="blob"><img src="assets/chef-smile.jpg" alt="Chef Penny Mufuka in her chef whites" loading="lazy" decoding="async"></div>
+      <div class="award-pic"><img src="assets/award-table.jpg" alt="Best of Johnson County 2025 award display with Bamboo Penny's plaque" loading="lazy" decoding="async"></div>
       <svg class="stamp" viewBox="0 0 128 128" aria-hidden="true">
         <defs><path id="circ" d="M64,64 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0"/></defs>
         <circle cx="64" cy="64" r="62" fill="#0C4051"/>
@@ -449,7 +452,7 @@
         </text>
         <text x="64" y="69" text-anchor="middle" fill="#fff" font-family="Scope One,serif" font-size="15">BP</text>
       </svg>
-      <div class="note" style="bottom:-30px;left:0"><b>3 · Craft details.</b> The organic photo mask and rotating stamp badge come straight from the reference set (Pure Thai's blob collage, La Marcha's seal). Small handmade touches that read "independent restaurant," not template.</div>
+      <div class="note" style="bottom:-30px;left:0"><b>3 · Craft details, real proof.</b> Blob mask and rotating stamp per the reference set — and the tilted photo is the actual Best of Johnson County 2025 plaque from their award table. Tangible proof next to the laurels.</div>
     </div>
     <div class="reveal d1">
       <div class="sec-head"><span class="sec-num">01</span><span class="sec-kicker">The Chef</span></div>
@@ -476,24 +479,24 @@
   </div>
   <div class="gallery">
     <div class="g-card reveal">
-      <div class="im"><img src="assets/food-yellow-curry.jpg" alt="Yellow curry" loading="lazy" decoding="async">
-      <span class="g-tag">Guest favorite</span>
-      <div class="g-body"><h3>Yellow Curry</h3><p>The "mind-blowing" dish reviewers drive across the metro for.</p></div></div>
+      <div class="im"><img src="assets/food-moo-ping.jpg" alt="Moo ping grilled pork skewers" loading="lazy" decoding="async">
+      <span class="g-tag">From the grill</span>
+      <div class="g-body"><h3>Moo Ping Skewers</h3><p>Char-grilled Thai street skewers, straight off the fire.</p></div></div>
     </div>
     <div class="g-card reveal d1">
-      <div class="im"><img src="assets/food-fried-rice.jpg" alt="Pineapple shrimp fried rice" loading="lazy" decoding="async">
-      <span class="g-tag">Chef's pick</span>
-      <div class="g-body"><h3>Pineapple Shrimp Fried Rice</h3><p>Sweet, savory, served with showmanship.</p></div></div>
+      <div class="im"><img src="assets/food-pad-thai.jpg" alt="Pad thai with shrimp and crushed peanut" loading="lazy" decoding="async">
+      <span class="g-tag">The classic</span>
+      <div class="g-body"><h3>Pad Thai</h3><p>Wok-tossed rice noodles, shrimp, egg ribbon and crushed peanut.</p></div></div>
     </div>
     <div class="g-card reveal d2">
-      <div class="im"><img src="assets/food-red-curry.jpg" alt="Red curry" loading="lazy" decoding="async">
-      <span class="g-tag">Classic</span>
+      <div class="im"><img src="assets/food-red-curry.jpg" alt="Red curry with bamboo shoots and basil" loading="lazy" decoding="async">
+      <span class="g-tag">Guest favorite</span>
       <div class="g-body"><h3>Red Curry</h3><p>Slow-stewed depth, bright chili heat, Thai basil.</p></div></div>
     </div>
     <div class="g-card reveal d2">
-      <div class="im"><img src="assets/food-noodles.jpg" alt="Noodle bowl" loading="lazy" decoding="async">
-      <span class="g-tag">Late night</span>
-      <div class="g-body"><h3>Chef's Noodles</h3><p>Hand-pulled comfort, built for Bamboo Room hours.</p></div></div>
+      <div class="im"><img src="assets/food-pineapple.jpg" alt="Pineapple fried rice served in the pineapple" loading="lazy" decoding="async">
+      <span class="g-tag">Chef's pick</span>
+      <div class="g-body"><h3>Pineapple Fried Rice</h3><p>Served in the pineapple — sweet, savory showmanship.</p></div></div>
     </div>
   </div>
   <div class="g-hint">
@@ -514,7 +517,7 @@
     <span class="qm">“</span>
     <blockquote>Wasn't expecting such an amazing environment and a <span class="hl">mind-blowing</span> yellow curry chicken.</blockquote>
     <div class="who">★★★★★ &nbsp;·&nbsp; Yelp review, Kansas City</div>
-    <div class="note" style="bottom:36px;left:50%;transform:translateX(-50%)"><b>5 · Proof as theater.</b> A real Yelp quote over Chef Penny in her own dining room — every interior on this page is now the actual venue.</div>
+    <div class="note" style="bottom:36px;left:50%;transform:translateX(-50%)"><b>5 · Proof as theater.</b> A real Yelp quote over a toast under their own string lights — every photo on this page is now from Bamboo Penny's own library.</div>
   </div>
 </section>
 
@@ -523,9 +526,9 @@
   <div class="big-ghost">TILL&nbsp;MIDNIGHT</div>
   <div class="wrap">
     <div class="collage reveal">
-      <div class="c1"><img src="assets/bar-cocktail.jpg" alt="Signature cocktail in the Bamboo Room" loading="lazy" decoding="async"></div>
-      <div class="c2"><img src="assets/bar-pour.jpg" alt="Cocktail pour" loading="lazy" decoding="async"></div>
-      <div class="c3"><img src="assets/bar-trio.jpg" alt="Cocktail trio" loading="lazy" decoding="async"></div>
+      <div class="c1"><img src="assets/broom-fire.jpg" alt="Fire pit glowing on the patio at night" loading="lazy" decoding="async"></div>
+      <div class="c2"><img src="assets/broom-cocktails.jpg" alt="Signature cocktails at the bar" loading="lazy" decoding="async"></div>
+      <div class="c3"><img src="assets/broom-spritz.jpg" alt="Spritz and sparkling wine" loading="lazy" decoding="async"></div>
     </div>
     <div class="reveal d1">
       <div class="sec-head"><span class="sec-num">03</span><span class="sec-kicker">After Dark</span></div>
@@ -567,14 +570,14 @@
     <h2 class="sec-title reveal">Your event, <span class="hl">our fire</span></h2>
     <div class="ev-grid">
       <a class="ev-card reveal" href="https://bamboopennys.com/leawood-leawood-bamboo-penny-s-party">
-        <img src="assets/chef-patio.jpg" alt="Chef Penny on the patio" loading="lazy" decoding="async">
+        <img src="assets/event-table.jpg" alt="Tropical table setting for a private event" loading="lazy" decoding="async">
         <div class="ev-body"><h3>Private <span>Events</span></h3><p>Rehearsal dinners to corporate takeovers of the Bamboo Room — each one built to your vision, with Chef Penny behind the fire.</p><span class="link-arrow">Plan your event <span>→</span></span></div>
       </a>
       <a class="ev-card reveal d1" href="https://tmt.spotapps.co/catering?spot_id=106368">
-        <img src="assets/cater-table.jpg" alt="A set table at Bamboo Penny's" loading="lazy" decoding="async">
+        <img src="assets/event-service.jpg" alt="Penny's team serving fresh spring rolls at an event" loading="lazy" decoding="async">
         <div class="ev-body"><h3>Catering <span>&amp; Large To-Go</span></h3><p>Full tropical Thai spreads for your gathering — delivered, or ready when you are.</p><span class="link-arrow">Get a quote <span>→</span></span></div>
       </a>
-      <div class="note" style="top:-20px;left:38%"><b>7 · High-ticket funnels, equal billing.</b> Events and catering carry the highest order value — and the patio card is Chef Penny herself. Event-focused microsites hang off these cards.</div>
+      <div class="note" style="top:-20px;left:38%"><b>7 · High-ticket funnels, equal billing.</b> Events and catering carry the highest order value — both cards show their real events: the tropical private-dining table and the team serving spring rolls. Event microsites hang off these cards.</div>
     </div>
   </div>
 </section>
@@ -622,7 +625,7 @@
     <div><h4>Connect</h4><a href="https://www.instagram.com/bamboopennys">Instagram</a><a href="https://www.facebook.com/102935811849755">Facebook</a><a href="https://www.yelp.com/biz/bamboo-pennys-leawood">Yelp</a><a href="https://staffedup.com/bamboopennys">Careers</a></div>
     <div><h4>Contact</h4><a href="tel:9132327695">(913) 232-7695</a><a href="#visit">5270 W 116th Pl<br>Leawood, KS 66211</a></div>
   </div>
-  <div class="fine">© 2026 Bamboo Penny's · Redesign concept — chef photography from the brand shoot; dish photography placeholder pending menu shoot</div>
+  <div class="fine">© 2026 Bamboo Penny's · Redesign concept — all photography from Bamboo Penny's own shoots and gallery</div>
 </footer>
 
 <div class="sticky-bar">
