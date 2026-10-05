@@ -7,78 +7,99 @@
 <meta name="robots" content="noindex">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Scope+One&family=Saira+Stencil+One&family=Allerta+Stencil&family=Josefin+Sans:wght@300;400;600&family=Marcellus&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..700&family=Young+Serif&family=Chonburi&family=Pridi:wght@500;600&family=Bevan&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
 <style>
-  :root{--ink:#063242;--teal:#0C4051;--lime:#C5E260;--cream:#F7F4EC;--dim:rgba(255,255,255,.72)}
+  :root{--ink:#063242;--teal:#0C4051;--lime:#C5E260;--cream:#F4EFDC;--menu-gold:#b3a04d;--menu-teal:#2a7a72;--dim:rgba(255,255,255,.72)}
   *{box-sizing:border-box;margin:0}
   body{background:var(--ink);color:#fff;font-family:'Montserrat',sans-serif;line-height:1.6;padding:0 0 80px}
-  .intro{max-width:900px;margin:0 auto;padding:70px 32px 20px}
-  .intro img{height:90px;margin-bottom:24px}
-  h1{font-family:'Scope One',serif;font-weight:400;font-size:clamp(28px,4vw,44px)}
-  .intro p{color:var(--dim);max-width:60ch;margin-top:12px;font-size:15px}
+  .intro{max-width:940px;margin:0 auto;padding:70px 32px 10px}
+  .intro img.logo{height:84px;margin-bottom:24px}
+  h1{font-family:'Fraunces',serif;font-variation-settings:"opsz" 11;font-weight:600;font-size:clamp(28px,4vw,44px)}
+  .intro p{color:var(--dim);max-width:62ch;margin-top:12px;font-size:15px}
   .intro .hl{color:var(--lime);font-weight:600}
-  .opt{max-width:900px;margin:40px auto 0;padding:44px 32px;border:1px solid rgba(197,226,96,.3);border-radius:16px;background:var(--teal)}
+  .target{max-width:940px;margin:30px auto 0;padding:0 32px}
+  .target .frame{border:1px solid rgba(197,226,96,.35);border-radius:14px;overflow:hidden}
+  .target img{display:block;width:100%}
+  .target .cap{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);margin-top:10px}
+  .opt{max-width:940px;margin:36px auto 0;padding:40px 32px;border:1px solid rgba(197,226,96,.3);border-radius:16px;background:var(--teal)}
+  .opt.rec{border-color:var(--lime);box-shadow:0 0 0 1px var(--lime)}
   .opt .tag{display:inline-block;background:var(--lime);color:var(--ink);font-weight:700;font-size:12px;letter-spacing:.14em;text-transform:uppercase;border-radius:999px;padding:6px 16px;margin-bottom:8px}
-  .opt .why{color:var(--dim);font-size:13.5px;margin-bottom:26px}
-  .wordmark{font-size:clamp(34px,6.5vw,64px);line-height:1.05;letter-spacing:.08em;text-transform:uppercase;margin-bottom:18px}
-  .wordmark span{color:var(--lime)}
-  .headline{font-size:clamp(22px,3.4vw,34px);line-height:1.2;margin-bottom:10px}
-  .body-sample{color:var(--dim);font-size:15px;max-width:58ch;font-family:'Montserrat',sans-serif}
-  .f-scope{font-family:'Scope One',serif;font-weight:400}
-  .f-saira{font-family:'Saira Stencil One',sans-serif;font-weight:400}
-  .f-allerta{font-family:'Allerta Stencil',sans-serif;font-weight:400}
-  .f-josefin{font-family:'Josefin Sans',sans-serif;font-weight:300}
-  .f-josefin .wordmark,.wordmark.f-josefin{letter-spacing:.18em}
-  .f-marcellus{font-family:'Marcellus',serif;font-weight:400}
-  @media (max-width:700px){.opt{margin-inline:16px;padding:32px 20px}}
+  .opt .why{color:var(--dim);font-size:13.5px;margin-bottom:24px;max-width:70ch}
+  .menu-mimic{background:var(--cream);border-radius:10px;padding:26px 28px;margin-bottom:22px}
+  .menu-mimic .mm-head{color:var(--menu-gold);font-size:clamp(30px,5vw,46px);line-height:1.05;margin-bottom:14px}
+  .menu-mimic .mm-item{color:var(--menu-teal);font-size:clamp(20px,3vw,27px)}
+  .menu-mimic .mm-item em{font-family:'Montserrat',sans-serif;font-style:normal;font-size:15px;color:#6b664f}
+  .headline{font-size:clamp(22px,3.4vw,34px);line-height:1.2;margin-bottom:8px}
+  .headline span{color:var(--lime)}
+  .f-fraunces{font-family:'Fraunces',serif;font-variation-settings:"opsz" 11;font-weight:600}
+  .f-young{font-family:'Young Serif',serif;font-weight:400}
+  .f-chonburi{font-family:'Chonburi',serif;font-weight:400}
+  .f-pridi{font-family:'Pridi',serif;font-weight:600}
+  .f-bevan{font-family:'Bevan',serif;font-weight:400}
+  @media (max-width:700px){.opt{margin-inline:16px;padding:30px 20px}.target{padding:0 16px}}
 </style>
 </head>
 <body>
 
 <div class="intro">
-  <img src="assets/logo.png" alt="Bamboo Penny's">
+  <img class="logo" src="assets/logo.png" alt="Bamboo Penny's">
   <h1>Headline font options</h1>
-  <p>Five directions for the <span class="hl">"Bamboo Penny's"</span> display type and section headlines, each shown as the hero wordmark, a headline, and body copy. The logo itself stays as-is in every option — this only affects typography around it. <span class="hl">Reply with an option number</span>, or send the branding screenshot and we'll match it exactly.</p>
+  <p>Matched against the new menu branding below. Each option shows the same menu-style sample ("craft cocktails") plus a site headline. <span class="hl">Option 1 is now live on the concept site</span> so you can see it in context — reply with a different number to switch, it's a one-line change.</p>
 </div>
 
-<div class="opt">
-  <span class="tag">Option 1 — current</span>
-  <div class="why">Scope One — the serif currently on bamboopennys.com and the live concept. Warm, bookish, understated.</div>
-  <div class="wordmark f-scope">Bamboo <span>Penny's</span></div>
-  <div class="headline f-scope">A story carried from Bangkok to Leawood</div>
-  <p class="body-sample">Sweet, sour, salty, spicy — balanced by KC's Best Chef in Leawood's Park Place.</p>
+<div class="target">
+  <div class="frame"><img src="assets/menu-brand-sample.jpg" alt="Current menu branding sample — craft cocktails page"></div>
+  <div class="cap">Target — your current menu branding</div>
+</div>
+
+<div class="opt rec">
+  <span class="tag">Option 1 — recommended · live on the site</span>
+  <div class="why">Fraunces (display cut) — soft chunky serifs, quirky old-style curves, very close personality to the menu face; a large family that also works at small sizes.</div>
+  <div class="menu-mimic f-fraunces">
+    <div class="mm-head">craft cocktails</div>
+    <div class="mm-item">lemongrass basil margarita <em>/ 15</em></div>
+  </div>
+  <div class="headline f-fraunces">A story carried from <span>Bangkok to Leawood</span></div>
 </div>
 
 <div class="opt">
   <span class="tag">Option 2</span>
-  <div class="why">Saira Stencil One — stencil letterforms closest in spirit to the cut-out geometry of the Bamboo Penny's logo wordmark.</div>
-  <div class="wordmark f-saira">Bamboo <span>Penny's</span></div>
-  <div class="headline f-saira">A story carried from Bangkok to Leawood</div>
-  <p class="body-sample">Sweet, sour, salty, spicy — balanced by KC's Best Chef in Leawood's Park Place.</p>
+  <div class="why">Young Serif — low-contrast, thick old-style serif; arguably the closest single match to the menu's letterforms, but only one weight exists.</div>
+  <div class="menu-mimic f-young">
+    <div class="mm-head">craft cocktails</div>
+    <div class="mm-item">lemongrass basil margarita <em>/ 15</em></div>
+  </div>
+  <div class="headline f-young">A story carried from <span>Bangkok to Leawood</span></div>
 </div>
 
 <div class="opt">
   <span class="tag">Option 3</span>
-  <div class="why">Allerta Stencil — a rounder, friendlier stencil; echoes the logo's cuts with a softer voice.</div>
-  <div class="wordmark f-allerta">Bamboo <span>Penny's</span></div>
-  <div class="headline f-allerta">A story carried from Bangkok to Leawood</div>
-  <p class="body-sample">Sweet, sour, salty, spicy — balanced by KC's Best Chef in Leawood's Park Place.</p>
+  <div class="why">Chonburi — a fat-face designed for Thai and Latin together; more contrast and drama than the menu face, with an authentic Thai type heritage.</div>
+  <div class="menu-mimic f-chonburi">
+    <div class="mm-head">craft cocktails</div>
+    <div class="mm-item">lemongrass basil margarita <em>/ 15</em></div>
+  </div>
+  <div class="headline f-chonburi">A story carried from <span>Bangkok to Leawood</span></div>
 </div>
 
 <div class="opt">
   <span class="tag">Option 4</span>
-  <div class="why">Josefin Sans — light geometric sans with wide tracking; modern-tropical, resort-menu energy.</div>
-  <div class="wordmark f-josefin">Bamboo <span>Penny's</span></div>
-  <div class="headline f-josefin">A story carried from Bangkok to Leawood</div>
-  <p class="body-sample">Sweet, sour, salty, spicy — balanced by KC's Best Chef in Leawood's Park Place.</p>
+  <div class="why">Pridi — Thai-Latin slab with softly looped forms; calmer than the others, menu-card friendly, multiple weights.</div>
+  <div class="menu-mimic f-pridi">
+    <div class="mm-head">craft cocktails</div>
+    <div class="mm-item">lemongrass basil margarita <em>/ 15</em></div>
+  </div>
+  <div class="headline f-pridi">A story carried from <span>Bangkok to Leawood</span></div>
 </div>
 
 <div class="opt">
   <span class="tag">Option 5</span>
-  <div class="why">Marcellus — refined roman capitals; upscale and timeless, pairs well with the lotus mark.</div>
-  <div class="wordmark f-marcellus">Bamboo <span>Penny's</span></div>
-  <div class="headline f-marcellus">A story carried from Bangkok to Leawood</div>
-  <p class="body-sample">Sweet, sour, salty, spicy — balanced by KC's Best Chef in Leawood's Park Place.</p>
+  <div class="why">Bevan — condensed slab poster face; the boldest and most condensed of the set, closest to the menu's density, less refined at small sizes.</div>
+  <div class="menu-mimic f-bevan">
+    <div class="mm-head">craft cocktails</div>
+    <div class="mm-item">lemongrass basil margarita <em>/ 15</em></div>
+  </div>
+  <div class="headline f-bevan">A story carried from <span>Bangkok to Leawood</span></div>
 </div>
 
 </body>
