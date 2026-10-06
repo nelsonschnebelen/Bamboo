@@ -7,7 +7,7 @@
 <meta name="robots" content="noindex">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..700&family=Young+Serif&family=Chonburi&family=Pridi:wght@500;600&family=Bevan&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..700&family=Young+Serif&family=Chonburi&family=Pridi:wght@500;600&family=Bevan&family=Abril+Fatface&family=Prata&family=DM+Serif+Display&family=Gloock&family=Rozha+One&family=Cormorant:wght@500;600;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
 <style>
   :root{--ink:#063242;--teal:#0C4051;--lime:#C5E260;--cream:#F4EFDC;--menu-gold:#b3a04d;--menu-teal:#2a7a72;--dim:rgba(255,255,255,.72)}
   *{box-sizing:border-box;margin:0}
@@ -17,13 +17,18 @@
   h1{font-family:'Fraunces',serif;font-variation-settings:"opsz" 11;font-weight:600;font-size:clamp(28px,4vw,44px)}
   .intro p{color:var(--dim);max-width:62ch;margin-top:12px;font-size:15px}
   .intro .hl{color:var(--lime);font-weight:600}
+  .divider{max-width:940px;margin:56px auto 0;padding:0 32px;display:flex;align-items:center;gap:18px}
+  .divider h2{font-family:'Fraunces',serif;font-variation-settings:"opsz" 11;font-weight:600;font-size:22px;white-space:nowrap}
+  .divider::after{content:"";height:1px;background:rgba(197,226,96,.35);flex:1}
   .target{max-width:940px;margin:30px auto 0;padding:0 32px}
   .target .frame{border:1px solid rgba(197,226,96,.35);border-radius:14px;overflow:hidden}
   .target img{display:block;width:100%}
   .target .cap{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);margin-top:10px}
-  .opt{max-width:940px;margin:36px auto 0;padding:40px 32px;border:1px solid rgba(197,226,96,.3);border-radius:16px;background:var(--teal)}
+  .opt{max-width:940px;margin:28px auto 0;padding:40px 32px;border:1px solid rgba(197,226,96,.3);border-radius:16px;background:var(--teal)}
   .opt.rec{border-color:var(--lime);box-shadow:0 0 0 1px var(--lime)}
+  .opt.bench{background:transparent;border-style:dashed}
   .opt .tag{display:inline-block;background:var(--lime);color:var(--ink);font-weight:700;font-size:12px;letter-spacing:.14em;text-transform:uppercase;border-radius:999px;padding:6px 16px;margin-bottom:8px}
+  .opt.bench .tag{background:transparent;border:1.5px solid var(--lime);color:var(--lime)}
   .opt .why{color:var(--dim);font-size:13.5px;margin-bottom:24px;max-width:70ch}
   .menu-mimic{background:var(--cream);border-radius:10px;padding:26px 28px;margin-bottom:22px}
   .menu-mimic .mm-head{color:var(--menu-gold);font-size:clamp(30px,5vw,46px);line-height:1.05;margin-bottom:14px}
@@ -36,15 +41,21 @@
   .f-chonburi{font-family:'Chonburi',serif;font-weight:400}
   .f-pridi{font-family:'Pridi',serif;font-weight:600}
   .f-bevan{font-family:'Bevan',serif;font-weight:400}
-  @media (max-width:700px){.opt{margin-inline:16px;padding:30px 20px}.target{padding:0 16px}}
+  .f-abril{font-family:'Abril Fatface',serif;font-weight:400}
+  .f-prata{font-family:'Prata',serif;font-weight:400}
+  .f-dmserif{font-family:'DM Serif Display',serif;font-weight:400}
+  .f-gloock{font-family:'Gloock',serif;font-weight:400}
+  .f-rozha{font-family:'Rozha One',serif;font-weight:400}
+  .f-cormorant{font-family:'Cormorant',serif;font-weight:600;letter-spacing:.01em}
+  @media (max-width:700px){.opt{margin-inline:16px;padding:30px 20px}.target{padding:0 16px}.divider{padding:0 16px}}
 </style>
 </head>
 <body>
 
 <div class="intro">
   <img class="logo" src="assets/logo.png" alt="Bamboo Penny's">
-  <h1>Headline font options</h1>
-  <p>Matched against the new menu branding below. Each option shows the same menu-style sample ("craft cocktails") plus a site headline. <span class="hl">Option 1 is now live on the concept site</span> so you can see it in context — reply with a different number to switch, it's a one-line change.</p>
+  <h1>Headline font options — round 2</h1>
+  <p>Per your note: <span class="hl">more condensed, slightly more elegant</span>, in the direction of Option 3 but less casual. Your Option 3 is repeated below as the benchmark, followed by six new candidates — all high-contrast, refined display serifs. <span class="hl">Reply with an option number</span> and the site switches same-day.</p>
 </div>
 
 <div class="target">
@@ -52,9 +63,83 @@
   <div class="cap">Target — your current menu branding</div>
 </div>
 
+<div class="opt bench">
+  <span class="tag">Your round-1 pick — Option 3, for comparison</span>
+  <div class="why">Chonburi — the drama you liked; the new options below keep this contrast but tighten and refine it.</div>
+  <div class="menu-mimic f-chonburi">
+    <div class="mm-head">craft cocktails</div>
+    <div class="mm-item">lemongrass basil margarita <em>/ 15</em></div>
+  </div>
+  <div class="headline f-chonburi">A story carried from <span>Bangkok to Leawood</span></div>
+</div>
+
+<div class="divider"><h2>Round 2 — condensed &amp; elegant</h2></div>
+
 <div class="opt rec">
-  <span class="tag">Option 1 — recommended · live on the site</span>
-  <div class="why">Fraunces (display cut) — soft chunky serifs, quirky old-style curves, very close personality to the menu face; a large family that also works at small sizes.</div>
+  <span class="tag">Option 6 — recommended</span>
+  <div class="why">Abril Fatface — the most direct "Option 3, dressed up": same fat-face drama, finer hairlines, more poised curves. Editorial and upscale.</div>
+  <div class="menu-mimic f-abril">
+    <div class="mm-head">craft cocktails</div>
+    <div class="mm-item">lemongrass basil margarita <em>/ 15</em></div>
+  </div>
+  <div class="headline f-abril">A story carried from <span>Bangkok to Leawood</span></div>
+</div>
+
+<div class="opt">
+  <span class="tag">Option 7</span>
+  <div class="why">Gloock — modern high-contrast display serif, naturally narrow. The most fashion-magazine of the set.</div>
+  <div class="menu-mimic f-gloock">
+    <div class="mm-head">craft cocktails</div>
+    <div class="mm-item">lemongrass basil margarita <em>/ 15</em></div>
+  </div>
+  <div class="headline f-gloock">A story carried from <span>Bangkok to Leawood</span></div>
+</div>
+
+<div class="opt">
+  <span class="tag">Option 8</span>
+  <div class="why">DM Serif Display — contemporary didone, slightly condensed, very clean. Elegant without being delicate; the safest at every size.</div>
+  <div class="menu-mimic f-dmserif">
+    <div class="mm-head">craft cocktails</div>
+    <div class="mm-item">lemongrass basil margarita <em>/ 15</em></div>
+  </div>
+  <div class="headline f-dmserif">A story carried from <span>Bangkok to Leawood</span></div>
+</div>
+
+<div class="opt">
+  <span class="tag">Option 9</span>
+  <div class="why">Rozha One — bold, dense didone with formal bearing; the closest to Option 3's weight while reading noticeably more refined.</div>
+  <div class="menu-mimic f-rozha">
+    <div class="mm-head">craft cocktails</div>
+    <div class="mm-item">lemongrass basil margarita <em>/ 15</em></div>
+  </div>
+  <div class="headline f-rozha">A story carried from <span>Bangkok to Leawood</span></div>
+</div>
+
+<div class="opt">
+  <span class="tag">Option 10</span>
+  <div class="why">Prata — graceful, quietly luxurious didone; lighter touch, beautiful at large sizes. Understated fine-dining energy.</div>
+  <div class="menu-mimic f-prata">
+    <div class="mm-head">craft cocktails</div>
+    <div class="mm-item">lemongrass basil margarita <em>/ 15</em></div>
+  </div>
+  <div class="headline f-prata">A story carried from <span>Bangkok to Leawood</span></div>
+</div>
+
+<div class="opt">
+  <span class="tag">Option 11</span>
+  <div class="why">Cormorant — the most condensed and most elegant of the set; tall, garamond-inspired, romantic. Needs its weight watched at small sizes.</div>
+  <div class="menu-mimic f-cormorant">
+    <div class="mm-head">craft cocktails</div>
+    <div class="mm-item">lemongrass basil margarita <em>/ 15</em></div>
+  </div>
+  <div class="headline f-cormorant">A story carried from <span>Bangkok to Leawood</span></div>
+</div>
+
+<div class="divider"><h2>Round 1 — for reference</h2></div>
+
+<div class="opt">
+  <span class="tag">Option 1 — currently live on the site</span>
+  <div class="why">Fraunces (display cut) — soft chunky serifs, closest personality to the menu face.</div>
   <div class="menu-mimic f-fraunces">
     <div class="mm-head">craft cocktails</div>
     <div class="mm-item">lemongrass basil margarita <em>/ 15</em></div>
@@ -64,7 +149,7 @@
 
 <div class="opt">
   <span class="tag">Option 2</span>
-  <div class="why">Young Serif — low-contrast, thick old-style serif; arguably the closest single match to the menu's letterforms, but only one weight exists.</div>
+  <div class="why">Young Serif — low-contrast, thick old-style serif.</div>
   <div class="menu-mimic f-young">
     <div class="mm-head">craft cocktails</div>
     <div class="mm-item">lemongrass basil margarita <em>/ 15</em></div>
@@ -73,18 +158,8 @@
 </div>
 
 <div class="opt">
-  <span class="tag">Option 3</span>
-  <div class="why">Chonburi — a fat-face designed for Thai and Latin together; more contrast and drama than the menu face, with an authentic Thai type heritage.</div>
-  <div class="menu-mimic f-chonburi">
-    <div class="mm-head">craft cocktails</div>
-    <div class="mm-item">lemongrass basil margarita <em>/ 15</em></div>
-  </div>
-  <div class="headline f-chonburi">A story carried from <span>Bangkok to Leawood</span></div>
-</div>
-
-<div class="opt">
   <span class="tag">Option 4</span>
-  <div class="why">Pridi — Thai-Latin slab with softly looped forms; calmer than the others, menu-card friendly, multiple weights.</div>
+  <div class="why">Pridi — Thai-Latin slab with softly looped forms.</div>
   <div class="menu-mimic f-pridi">
     <div class="mm-head">craft cocktails</div>
     <div class="mm-item">lemongrass basil margarita <em>/ 15</em></div>
@@ -94,7 +169,7 @@
 
 <div class="opt">
   <span class="tag">Option 5</span>
-  <div class="why">Bevan — condensed slab poster face; the boldest and most condensed of the set, closest to the menu's density, less refined at small sizes.</div>
+  <div class="why">Bevan — condensed slab poster face.</div>
   <div class="menu-mimic f-bevan">
     <div class="mm-head">craft cocktails</div>
     <div class="mm-item">lemongrass basil margarita <em>/ 15</em></div>
